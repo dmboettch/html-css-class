@@ -1,0 +1,25 @@
+@media print {
+    .banner {
+        display: none;
+    }
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+@media screen {
+    .banner{
+        width: 100%;
+        display: block;
+    }
+}
+
+/*the below rule only applies with screens smaller that 768px*/
+/*this is called a breakpoint*/
+@media only screen and (max-width: 768px){
+    .banner{
+        width: 50%;
+        display: inline-block;
+    }
+}

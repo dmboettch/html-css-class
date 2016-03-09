@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Transitions</title>
+        <style media="screen">
+            .block{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                color: #000;
+
+                /*transition-delay: 0;*/
+                /*transition-duration: 1s;*/
+                /*transition-property: color;*/
+                /*transition-timing-function: ease;*/
+
+                /*this is a the same transition but a short cut*/
+                /*transition order of properties is: property, duration, timing-function and delay*/
+                /*transition is used anytime the .block properties are changed by a different class*/
+                transition: color 1s ease 0s,   /*text color*/
+                            background-color .5s linear 0s,   /*background color*/
+                            border-radius 2s ease 0s,
+                            transform 1s ease 0s;  /*this is used for .moved below*/
+            }
+
+            .block:hover{
+                color: #fff;
+            }
+
+            .rounded {
+                background-color: blue;
+                border-radius: 100px;
+            }
+
+            /*transform is the movement on the page and transition is how it is managed*/
+
+            .moved{
+                /*transform: translateX(300px) rotate(360deg) skew(34deg) scale(0.5);*/
+
+                /*translate can either be x or y or both*/
+                /*skew and scale can take x or y*/
+                transform: translate(300px, 0px) rotate(360deg) skew(34deg, 0deg) scaleX(0.5)
+            }
+        </style>
+        <style media="print">  /*this is only used when the user prints*/
+            body{
+                font-size: 18px;
+            }
+            .banner{
+                display: none;
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var block = $('.block');
+                $('.button1').on('click', function(){
+                    block.toggleClass('rounded');  //this adds and remove the class (toggles it)
+                });
+
+                $('.button2').on('click', function(){
+                    block.toggleClass('moved');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!--button-->
+        <button type="button" name="button1" class="button1">click me!</button>
+        <button type="button" name="button2" class="button2">and me!</button>
+        <!--Hello-->
+        <div class="block">
+            Hello World!
+        </div>
+    </body>
+</html>

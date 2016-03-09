@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Backgrounds</title>
+        <style media="screen">
+            body {
+                background-color: black;
+                background-image: url(image.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                /*don't use background-position when using size/cover*/
+                color: #fff;
+            }
+            div{
+                /*color: #000;*/
+                padding: 15px 15px 15px 25px;
+                /*font-size: 2em; /* =32px = twice its parent*/
+                font-size: 2rem; /* = Twice the top level parent for nested text*/
+                font-weight: bold;
+                /*letter-spacing: 2px;*/
+                line-height: 2.3;
+                text-shadow: 2px 5px 7px rgba(0,0,0,0.5);
+                /*for shadow it is left/right up/down blur and color*/
+                box-shadow: 2px 5px 7px rgba(0,0,0,0.5);
+                color: #fff;
+                transition: all .5s ease;
+                text-align: left;
+                /*text-align can be left right center default is left*/
+                text-decoration: underline;
+                /*use text-decoration: none so links are not underlined*/
+                text-indent: 3rem;
+                
+            }
+            div:hover{
+                box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+            }
+            a:active{
+                color: yellow;
+                /*can use this so user knows they already visited a site*/
+            }
+            a:visited{
+                text-decoration: line-through;
+                /*can use this so user knows they already visited a site*/
+            }
+            .testbed{
+                height: 100px;
+                width: 100px;
+                background-color: green;
+                /*position: relative;*/
+                position: absolute; /*Need to be sure the parent is set to relative*/
+                /*position: fixed;*/
+                /*position: static; !*default*!*/
+                top:0;
+                left:0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Backgrounds
+        </h1>
+        <div class="testbed"></div>
+        <div class="container">
+            Sample Text
+            <div>
+                Some Other Text
+            </div>
+        </div>
+    </body>
+</html>

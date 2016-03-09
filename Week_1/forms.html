@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Forms. We don't need no steeking forms!
+        </title>
+    </head>
+    <body>
+        <h1>A Form.</h1>
+        <form action="form_submit.php" method="post" name="myform">
+            <!-- also can have target= (above)
+                _blank opens a blank page
+                _self opens in the same form
+                _parent reloads in the parent container -->
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="LastName" id="lastName">
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password">
+
+            <fieldset>
+                <label for="isAwesome">
+                    is Awesome?
+                    <!-- By putting the input type inside the label you are able to check on the label too.-->
+                    <input type="checkbox" name="isAwesome" id="isAwesome">
+                </label>
+            </fieldset>
+
+            <input type="button" name="hello_button" id="hello_button" value="hello">
+            <input type="submit" value="submit" id="submit">
+            <input type="reset" value="reset" id="reset">
+        </form>
+        <!-- Below is an example of a get. First is the domain name the after the ? is the criteria
+        http://www.google.com/form_submit.php?name=ben&lastname=vaughan
+        Below is an example of a post.
+        http://www.google.com/form_submit.php -->
+    </body>
+</html>

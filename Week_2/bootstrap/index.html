@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Demo</title>
+    <!-- Load me some jQuery! -->
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!-- Below code was copied from Bootstrap CDN-->
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- link to style sheet -->
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+
+<!-- Below code was copied from http://getbootstrap.com/components/#navbar (default navbar and added navbar-inverse) -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Acme, Inc.</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- below from bootstram http://getbootstrap.com/components/#breadcrumbs -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>  <!-- this makes the data tab active -->
+            </ol>
+        </div>
+    </div>
+    <!-- below copied from bootstrap http://getbootstrap.com/components/#jumbotron -->
+    <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, delectus deleniti dolorum,
+            esse exercitationem facilis fuga incidunt ipsa magnam nemo numquam, omnis quos reiciendis repellendus saepe
+            sunt vero vitae.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+    <!-- Three columns of badges -->
+    <div class="row">
+        <!-- below is responsive (medium screen is 4 columns wide) and (small screen is 12 columns wide)-->
+        <!-- this behavior is inherited from bootstrap -->
+        <div class="col-md-4 col-sm-12">
+            <!-- copied from http://getbootstrap.com/components/#jumbotron -->
+                <div class="thumbnail">
+                    <img src="https://unsplash.it/350/200/?image=1002" alt="unsplash image">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur
+                            consequatur culpa deserunt dolor eligendi, facere facilis impedit ipsa libero, mollitia
+                            placeat provident qui quidem quisquam sapiente veritatis, voluptate!</p>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-4 col-sm-12">
+            <!-- copied from http://getbootstrap.com/components/#jumbotron -->
+            <div class="thumbnail">
+                <!-- get images from unsplash or unsplash.it-->
+                <img src="https://unsplash.it/350/200/?image=981" alt="unsplash image">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur
+                        consequatur culpa deserunt dolor eligendi, facere facilis impedit ipsa libero, mollitia
+                        placeat provident qui quidem quisquam sapiente veritatis, voluptate!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <!-- copied from http://getbootstrap.com/components/#jumbotron -->
+                <div class="thumbnail">
+                    <img src="https://unsplash.it/350/200/?image=903" alt="unsplash image">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur
+                            consequatur culpa deserunt dolor eligendi, facere facilis impedit ipsa libero, mollitia
+                            placeat provident qui quidem quisquam sapiente veritatis, voluptate!</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <!-- p>lorem -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste quidem repellat sit voluptatem. Ad
+            asperiores eos illum nulla placeat rem, tempora veniam voluptatibus. Consequatur dolore eos ex soluta
+            voluptate!
+        </p>
+    </div>
+    <h2>
+        Some Heading Here!
+    </h2>
+    <!-- div>p*4>lorem*4 -->
+    <div class="mainContent">
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, amet commodi consequuntur dignissimos dolore dolorem esse eveniet hic, laboriosam maxime molestias mollitia nihil nostrum obcaecati, officiis quia quisquam quo sequi.</span><span>Accusantium adipisci aliquam beatae consequatur, deleniti distinctio earum eum facere harum impedit itaque labore laboriosam minus neque optio quas repellendus saepe tempora veritatis voluptatum! Delectus deserunt fugit iusto quisquam sunt!</span><span>Commodi debitis illum minus natus odit omnis, unde! Accusamus asperiores dicta dolorem doloremque eius fugiat laudantium libero modi molestiae molestias omnis optio, praesentium, quo quos repellendus, ut velit voluptate voluptatum!</span><span>Accusantium aliquam aperiam at atque culpa deleniti dolor doloremque ducimus eos exercitationem harum ipsum libero magnam molestiae nemo nulla numquam omnis optio perspiciatis praesentium, provident sed sequi sit ut vero.</span>
+        </p>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis dicta esse est. A alias, amet consequuntur et facere facilis fuga hic magnam molestiae officia recusandae unde veritatis voluptates, voluptatibus!</span><span>Accusantium adipisci alias, aliquid animi commodi, consectetur debitis dolore dolorem fugit mollitia nemo nesciunt nobis non omnis provident quibusdam repellat voluptatem? Dolore dolorum nemo officiis quibusdam rem sequi veniam voluptates!</span><span>Aliquam consequuntur cum doloremque et eum expedita facere harum obcaecati, pariatur quae quaerat quasi, quo repellendus tenetur veniam veritatis voluptate? Adipisci assumenda atque commodi dignissimos est illum laboriosam sapiente veritatis.</span><span>A aliquid, assumenda culpa delectus dignissimos ducimus est et eveniet explicabo magnam maiores minus rerum saepe totam unde. Adipisci consequuntur dolor ipsum labore maiores non quis repellendus tenetur vero voluptatem!</span>
+        </p>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus est libero maxime nulla odit placeat quam, rerum temporibus! Aspernatur consectetur dolore doloribus laudantium libero mollitia nulla quod repellat, sint.</span><span>Ad asperiores autem cum distinctio et molestiae placeat quam! Aliquam amet, at atque autem cum delectus, dolore eum fugiat incidunt nemo officia temporibus. Accusamus harum in laboriosam neque ratione reiciendis?</span><span>Deserunt iure magnam molestias, obcaecati officia quidem quis sapiente? Architecto, blanditiis commodi consequuntur cum delectus distinctio eum, eveniet exercitationem laudantium libero magnam, maxime nisi quia tempora velit! Similique, tenetur voluptas.</span><span>Ad, libero voluptates. Accusamus, ad aliquam consequatur culpa cum deserunt eaque eos excepturi inventore minima minus neque officiis omnis perspiciatis provident quis quisquam quo ratione saepe sapiente ullam vero voluptas!</span>
+        </p>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto debitis eveniet, ex exercitationem, facere fugit incidunt iste modi molestias nam necessitatibus nisi officiis quis tenetur. Nisi nobis non sed!</span><span>Ab animi ex iusto perferendis unde, vel. Architecto aspernatur cumque cupiditate dolor eaque eius fugiat ipsum iste magnam magni, maxime non perferendis quas ratione sed, sint soluta suscipit vero voluptatem.</span><span>Deleniti eligendi eveniet maiores numquam quasi sed tempora. Eos ex ipsa laborum, molestias omnis quasi quos ratione. A ea earum expedita molestiae quidem! Adipisci architecto dolorem, non numquam porro possimus.</span><span>Adipisci aspernatur, commodi cumque illum ipsam non nostrum officia, qui quibusdam recusandae reiciendis ullam veritatis, vitae! Aperiam consequatur ea eaque esse id in iusto libero, possimus voluptas? Corporis, incidunt, saepe!</span>
+        </p>
+    </div>
+</div>
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted"> Place sticky footer content here.</p>
+    </div>
+</footer>
+</body>
+</html>

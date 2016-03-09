@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlexBox - The New Hotness</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header{
+            background-color: #e6a6e5;
+            height: 50px;
+            display: flex;
+            justify-content:flex-start;
+            align-items:center;
+        }
+
+        .content{
+            background-color: #744de6;
+            /*flex: 1 0 auto;*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            display: flex;   /*this places the content side by side on the page*/
+        }
+
+        .sidebar{
+            background-color: #c8ccb4;
+            width: 200px;
+            flex: 1 0 auto;
+        }
+
+        .main{
+            flex-shrink:1;
+            background-color: #efefef;
+            overflow-y: scroll;
+        }
+
+        .ads{
+            background-color: #c8ccb4;
+            width: 150px;
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction:column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .ad{
+            width: 100px;
+            height:100px;
+            background-color: #458008;
+            display: flex;
+            /*flex: 0 0 auto;*/
+            justify-content: center;
+            align-items:center;
+            font-size: 36px;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-bottom: 1rem;
+        }
+        .ad:first-child{
+            margin-top:1rem;
+        }
+
+        .ad:after{
+            content: "$";
+            display: block;
+            color: #ffffff;
+        }
+
+        .footer{
+            background-color: #765C7A;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    header
+</div>
+<div class="content clearfix">
+    <div class="sidebar">
+        <!-- ul>li*4>a  then tab to get 4 li with 'a' tag-->
+        <ul>
+            <li>
+                <a href="#">link1</a>
+            </li>
+            <li>
+                <a href="#">link1</a>
+            </li>
+            <li>
+                <a href="#">link1</a>
+            </li>
+            <li>
+                <a href="#">link1</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <!-- p*5>lorem  then tab to get below text in 5 paragraphs-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet at deserunt exercitationem facilis magni
+            nemo nobis tenetur? Aliquid aspernatur, beatae fugiat illum iste molestiae molestias porro quis sit
+            voluptas!</p>
+        <p>Animi atque autem, beatae cum eveniet excepturi ipsum modi neque nobis obcaecati omnis optio porro quam quas
+            quasi quibusdam quidem rem sequi suscipit tempora tempore temporibus tenetur unde veniam voluptates.</p>
+        <p>Accusamus accusantium, ad beatae blanditiis consequatur debitis earum hic incidunt natus nulla odio optio
+            quia quis, quisquam quos repellendus, totam voluptatum. Beatae delectus eius est exercitationem fuga harum
+            iure repellendus.</p>
+        <p>Accusantium animi commodi dicta distinctio dolore dolorem, doloremque ducimus error id, ipsa magnam modi nam
+            nesciunt nisi odio, quas quia quis quisquam ratione rem rerum suscipit tempore temporibus unde
+            voluptates.</p>
+        <p>Ab ad commodi consectetur dolor dolorum excepturi minus molestias provident quasi, qui sequi similique
+            tenetur unde? Dolorem molestias qui saepe. A ducimus neque pariatur perspiciatis porro provident quibusdam
+            tempora vitae!</p>
+        <p>Maiores, perferendis, recusandae? Ab ad consectetur dicta doloremque, doloribus excepturi incidunt, ipsam
+            ipsum nobis numquam odio, omnis quae quasi qui quibusdam rem reprehenderit saepe sint tempore totam velit
+            veritatis voluptatibus.</p>
+        <p>Adipisci aspernatur cumque delectus deserunt earum eos esse et ex illo inventore iste iure laboriosam maxime
+            necessitatibus nisi odio odit officia perspiciatis quam quo sed, suscipit totam vel. Error, molestiae!</p>
+        <p>Ad asperiores commodi dignissimos minus omnis placeat quod sit? Eius expedita impedit ipsum magnam obcaecati
+            quidem recusandae repellendus voluptatibus. Animi consequatur culpa cum ea eligendi, laborum maiores sint
+            suscipit. Ipsum?</p>
+        <p>Aliquid architecto asperiores at consequatur culpa cumque dicta eligendi ex exercitationem explicabo hic
+            incidunt ipsa labore, laborum laudantium maxime modi nemo perspiciatis quod rem reprehenderit sequi sint sit
+            ut voluptatum.</p>
+        <p>Dicta distinctio eaque error itaque labore minima odit reprehenderit temporibus! Ad deleniti eius eligendi
+            explicabo facilis fugit hic laudantium officia officiis quas, repellat vitae voluptate voluptatum? Autem
+            deserunt minus nesciunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto, aspernatur cupiditate debitis,
+            earum eum excepturi illo itaque laboriosam minima minus numquam quibusdam quo saepe sapiente, tenetur
+            veniam? Alias, minus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam atque aut cupiditate ducimus
+            eaque ipsum numquam, odit praesentium quia repudiandae, sit tempore, vero! Beatae deleniti earum
+            numquam odit veniam?</p>
+        <p>Accusantium aliquam corporis cupiditate debitis ea eaque est et eum eveniet exercitationem illum
+            inventore molestiae perferendis possimus praesentium quae qui quia quis quisquam quo, quod
+            reprehenderit sit soluta tempora vitae!</p>
+        <p>Dolores minus soluta sunt. Consequatur cupiditate, dicta, enim exercitationem explicabo minus nam
+            possimus quae quam quis repudiandae sequi, voluptate voluptatum! Adipisci eveniet fugiat minus sequi
+            similique! Atque eum mollitia voluptatum?</p>
+        <p>Architecto aut blanditiis consequuntur deserunt dolores eius, enim excepturi facere fuga id inventore
+            ipsa officiis quaerat reiciendis rerum sed sunt, ut veniam veritatis voluptas. A corporis ex magni
+            placeat vero!</p>
+        <p>Blanditiis, corporis reprehenderit? Blanditiis dolorum earum explicabo laboriosam, libero minima
+            nulla officiis quam tenetur ullam. Accusantium blanditiis deserunt dolor esse, ex fugit labore
+            molestiae nobis repellendus rerum suscipit, velit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi delectus eum facilis natus quia
+            quidem rerum ut. Aliquid blanditiis excepturi illo laborum nisi. Deserunt dolorum maxime necessitatibus
+            repudiandae soluta.</p>
+        <p>Aliquid architecto aspernatur culpa cumque dolor dolore dolorem eaque, et incidunt magnam maiores maxime
+            minus molestias nemo nulla odit officia perspiciatis provident quaerat quas qui repudiandae similique, sit
+            totam voluptate?</p>
+        <p>Alias, autem delectus dicta exercitationem in ipsa nam natus unde vero vitae? Alias magni pariatur tempore.
+            Ab cum deserunt, eos, et excepturi exercitationem facere non repellat repudiandae, sed unde veritatis!</p>
+        <p>Ab animi assumenda blanditiis consequatur cupiditate dolores ea eaque esse eum fugit harum hic iste maxime
+            minima modi molestiae quae quaerat quos reiciendis, rem repudiandae rerum suscipit temporibus vel
+            voluptatibus.</p>
+        <p>At, odit, sequi? Amet animi asperiores autem cupiditate debitis dolor dolore exercitationem fugit ipsum iusto
+            maiores molestiae, molestias nam nostrum obcaecati optio quaerat quia quos sed sint sunt ullam vero?</p>
+    </div>
+    <div class="ads">
+        <div class="ad"></div>
+        <div class="ad"></div>
+        <div class="ad"></div>
+    </div>
+</div>
+<div class="footer">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam culpa est excepturi, nihil officia
+        quibusdam quis reiciendis ut voluptatem! Ad at dolor harum laboriosam nemo quibusdam reiciendis tempora
+        veritatis.</p>
+    <p>
+    copyright &copy; 2016.
+    </p>
+</div>
+</body>
+</html>
